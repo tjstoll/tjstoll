@@ -149,6 +149,9 @@ a {
 .lb {
   align-items: flex-end; }
 
+.r {
+  align-self: flex-end; }
+
 .text-center {
   text-align: center; }
 
@@ -159,20 +162,41 @@ a {
   .container {
     padding: 5rem 15%; } }
 
-#navigation-large {
-  display: none; }
+input {
+  background: #020202;
+  color: white;
+  font-size: 2rem;
+  opacity: 0.8; }
+  input[name='name'], input[name='_replyto'] {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ff005c; }
+  input::placeholder {
+    color: #ff005c; }
 
-#navigation-small {
-  display: block; }
+textarea[name='message'] {
+  opacity: 0.8;
+  resize: none;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ff005c;
+  background: #020202;
+  color: white;
+  font-size: 2rem; }
+  textarea[name='message']::placeholder {
+    color: #ff005c; }
 
-.menuButton {
-  padding: 1rem; }
-
-.logo {
-  position: absolute;
-  bottom: -150px;
-  z-index: 9999;
-  right: 50%; }
+input[name='submit'] {
+  border: none;
+  padding: 1rem;
+  border-bottom: 2px solid #020202; }
 
 .landing {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/IMG_1360.JPG);
@@ -193,8 +217,55 @@ a {
   color: #ff005c;
   font-weight: bold; }
 
+.navigation-small {
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  z-index: 101;
+  padding-left: 15px;
+  padding-top: 30px;
+  font-size: 2rem;
+  color: #828282;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll; }
+
+.nav-controls {
+  right: 0;
+  margin: 0 1rem 2rem 0; }
+
+.small-menu {
+  overflow-y: scroll; }
+
+.menuButton {
+  position: relative;
+  margin: 0;
+  color: #828282;
+  margin-bottom: 50px; }
+  .menuButton:last-child {
+    margin-bottom: 0; }
+  .menuButton:hover {
+    transition: 0.3s;
+    color: #ff005c; }
+  .menuButton a {
+    color: #828282; }
+    .menuButton a:hover {
+      color: #ff005c; }
+
+#navigation-large {
+  display: none; }
+
+.menuButton {
+  padding: 1rem; }
+
+.logo {
+  position: absolute;
+  bottom: -150px;
+  z-index: 9999;
+  right: 50%; }
+
 @media screen and (min-width: 950px) {
-  #navigation-small {
+  .navigation-small {
     display: none; }
   #navigation-large {
     display: flex;
@@ -206,20 +277,6 @@ a {
     margin-left: 30px;
     display: block;
     font-size: 1rem; }
-  .menuButton {
-    position: relative;
-    margin: 0;
-    color: #828282;
-    margin-bottom: 50px; }
-    .menuButton:last-child {
-      margin-bottom: 0; }
-    .menuButton:hover {
-      transition: 0.3s;
-      color: #ff005c; }
-    .menuButton a {
-      color: #828282; }
-      .menuButton a:hover {
-        color: #ff005c; }
   .menu:hover .subMenu, .like:hover .subMenu {
     display: block;
     animation: slideout 0.3s ease-out; }

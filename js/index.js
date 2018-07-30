@@ -1,1 +1,3 @@
-console.log("I'm alive!");
+var toggleSmallNav = function() {
+  console.log('I work!');
+}

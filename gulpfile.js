@@ -1,24 +1,19 @@
-// This is a good tutorial to get started with
-// https://css-tricks.com/gulp-for-beginners/
-
 var gulp = require('gulp');
+// var rename = require('gulp-rename');
 var sass = require('gulp-sass');
-var pug = require('gulp-pug');
+// var handlebars = require('gulp-handlebars');
 var browserSync = require('browser-sync').create();
-var cleanDest = require('gulp-clean-dest');
 
 var sources = {
   "styles": "src/styles/*.+(css|scss)",
   "scripts": "src/scripts/*.js",
   "images": "src/images/*.+(png|jpg|svg|JPG|PNG|SVG)",
-  "views": "src/views/*.+(html|pug)",
-  "php": "src/php/*.php"
+  "views": "src/views/*.html"
 };
 var dests = {
   "css": "dist/css",
   "js": "dist/js",
-  "images": "dist/images",
-  "php": "dist/php"
+  "images": "dist/images"
 };
 
 gulp.task('css', function() {
@@ -32,12 +27,20 @@ gulp.task('css', function() {
 
 gulp.task('html', function() {
   gulp.src(sources.views)
-    .pipe(pug())
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
+
+// gulp.task('handlebars', function() {
+//   gulp.src(sources.views)
+//   .pipe(handlebars())
+//   .pipe(gulp.dest('dist'))
+//   .pipe(browserSync.reload({
+//     stream: true
+//   }));
+// });
 
 gulp.task('js', function() {
   gulp.src(sources.scripts)
@@ -50,14 +53,6 @@ gulp.task('js', function() {
 gulp.task('img', function() {
   gulp.src(sources.images)
   .pipe(gulp.dest(dests.images))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
-});
-
-gulp.task('php', function() {
-  gulp.src(sources.php)
-  .pipe(gulp.dest(dests.php))
   .pipe(browserSync.reload({
     stream: true
   }));
