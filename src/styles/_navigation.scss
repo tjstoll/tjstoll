@@ -7,7 +7,8 @@
   padding-left: 15px;
   padding-top: 30px;
   font-size: 2rem;
-  color: lighten($main, 50%);
+  // color: lighten($main, 50%);
+  color: $tertiary;
   width: 100%;
   max-height: 100vh;
   overflow-y: scroll;
@@ -26,7 +27,8 @@
 .menuButton {
   position: relative;
   margin: 0;
-  color: lighten($main, 50%);
+  // color: lighten($main, 50%);
+  color: $tertiary;
   margin-bottom: 50px;
   // border: 1px solid red;
   &:last-child {
@@ -37,7 +39,8 @@
     color: $accent;
   }
   a {
-    color: lighten($main, 50%);
+    // color: lighten($main, 50%);
+    color: $tertiary;
     &:hover {color: $accent;}
   }
 }

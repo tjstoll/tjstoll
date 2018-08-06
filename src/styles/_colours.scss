@@ -1,11 +1,16 @@
-$main: #020202; // Black
-$accent: #ff005c;//#e6005c; // Fierce Pink
+$main: #00050d; // Black
+$accent: #ff6600; // Worker Orange
 $secondary: #fff; // White
-$tertiary: #333; // Dark Grey
+$tertiary: #5a606a; // Dark Grey
+$fourthiary: #CBCFD5; // Light Grey
 
 // Button Styles
 .button-main {
   background: $main;
+  color: $secondary;
+}
+.button-accent {
+  background: $accent;
   color: $secondary;
 }
 .button-secondary {
@@ -58,6 +63,16 @@ $tertiary: #333; // Dark Grey
   }
 }
 
+.bg-fourthiary {
+  background: $fourthiary;
+  color: $tertiary;
+  & button {
+    @extend .button-secondary;
+  }
+  & hr {
+    border: 1px solid $secondary;
+  }
+}
 .low-opacity {opacity: 0.8;}
 // Text Styles
 .text-main {color: $main;}

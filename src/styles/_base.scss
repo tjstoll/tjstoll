@@ -7,6 +7,7 @@ body {
   // background: url('https://tjstoll.github.io/media/003-granulated-loom.png');
   background: url('../images/concrete-wall.png');
   background-position: fixed;
+  position: relative;
 }
 html {
   font-size: 11px;
@@ -41,6 +42,14 @@ a {
   &:hover {
     color: $accent;
   }
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  outline: none;
 }
 
 // Large Screens ---------------------------------------------------------------

@@ -1,56 +1,67 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 .button-main, .bg-accent button, .bg-secondary button {
-  background: #020202;
+  background: #00050d;
   color: #fff; }
 
-.button-secondary, .bg-main button, .bg-tertiary button {
+.button-accent {
+  background: #ff6600;
+  color: #fff; }
+
+.button-secondary, .bg-main button, .bg-tertiary button, .bg-fourthiary button {
   background: #fff;
-  color: #020202; }
+  color: #00050d; }
 
 .bg-main {
-  background: #020202;
+  background: #00050d;
   color: #fff; }
   .bg-main hr {
     border: 1px solid #fff; }
 
 .bg-accent {
-  background: #ff005c;
-  color: #020202; }
+  background: #ff6600;
+  color: #00050d; }
   .bg-accent hr {
-    border: 1px solid #020202; }
+    border: 1px solid #00050d; }
 
 .bg-secondary {
   background: #fff;
-  color: #020202; }
+  color: #00050d; }
   .bg-secondary hr {
-    border: 1px solid #020202; }
+    border: 1px solid #00050d; }
 
 .bg-tertiary {
-  background: #333;
+  background: #5a606a;
   color: #fff; }
   .bg-tertiary hr {
+    border: 1px solid #fff; }
+
+.bg-fourthiary {
+  background: #CBCFD5;
+  color: #5a606a; }
+  .bg-fourthiary hr {
     border: 1px solid #fff; }
 
 .low-opacity {
   opacity: 0.8; }
 
 .text-main {
-  color: #020202; }
+  color: #00050d; }
 
 .text-accent {
-  color: #ff005c; }
+  color: #ff6600; }
 
 .text-secondary {
   color: #fff; }
 
 .text-tertiary {
-  color: #333; }
+  color: #5a606a; }
 
 body {
   margin: 0;
   background: url("../images/concrete-wall.png");
-  background-position: fixed; }
+  background-position: fixed;
+  position: relative; }
 
 html {
   font-size: 11px;
@@ -80,9 +91,16 @@ hr {
 
 a {
   text-decoration: none;
-  color: #333; }
+  color: #5a606a; }
   a:hover {
-    color: #ff005c; }
+    color: #ff6600; }
+
+button {
+  padding: 1rem;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  outline: none; }
 
 @media screen and (min-width: 950px) {
   html {
@@ -116,6 +134,14 @@ a {
   padding: 1rem;
   box-sizing: border-box; }
 
+.skew1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+
+.skew2 {
+  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+  position: relative;
+  top: -100; }
+
 .flex1 {
   flex: 1; }
 
@@ -141,16 +167,17 @@ a {
   margin: auto; }
 
 .ct {
-  align-self: center; }
+  justify-content: center; }
 
 .lc {
   align-self: center; }
 
 .lb {
-  align-items: flex-end; }
+  justify-content: flex-end;
+  align-items: center; }
 
-.r {
-  align-self: flex-end; }
+.space-between {
+  justify-content: space-between; }
 
 .text-center {
   text-align: center; }
@@ -160,10 +187,10 @@ a {
 
 @media screen and (min-width: 950px) {
   .container {
-    padding: 5rem 15%; } }
+    padding: 5rem 20%; } }
 
 input {
-  background: #020202;
+  background: #00050d;
   color: white;
   font-size: 2rem;
   opacity: 0.8; }
@@ -173,9 +200,9 @@ input {
     margin-bottom: 0.5rem;
     outline: none;
     border: none;
-    border-bottom: 2px solid #ff005c; }
+    border-bottom: 2px solid #ff6600; }
   input::placeholder {
-    color: #ff005c; }
+    color: #ff6600; }
 
 textarea[name='message'] {
   opacity: 0.8;
@@ -186,23 +213,22 @@ textarea[name='message'] {
   margin-bottom: 0.5rem;
   outline: none;
   border: none;
-  border-bottom: 2px solid #ff005c;
-  background: #020202;
+  border-bottom: 2px solid #ff6600;
+  background: #00050d;
   color: white;
   font-size: 2rem; }
   textarea[name='message']::placeholder {
-    color: #ff005c; }
+    color: #ff6600; }
 
 input[name='submit'] {
   border: none;
   padding: 1rem;
-  border-bottom: 2px solid #020202; }
+  border-bottom: 2px solid #00050d; }
 
 .landing {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/IMG_1360.JPG);
+  background-image: url("../images/woman.jpg");
   background-position: center top;
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 .stack {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/IMG_0811.JPG);
@@ -214,8 +240,23 @@ input[name='submit'] {
     margin: 0; }
 
 .highlight {
-  color: #ff005c;
+  color: #ff6600;
   font-weight: bold; }
+
+.skill-icon1 {
+  height: 150px;
+  width: 80px; }
+
+.skill-icon {
+  width: 50px; }
+
+@media screen and (min-width: 800px) {
+  .landing {
+    background-position: right top; }
+  .skill1-icon {
+    width: 130px; }
+  .skill-icon {
+    width: 100px; } }
 
 .navigation-small {
   position: fixed;
@@ -225,7 +266,7 @@ input[name='submit'] {
   padding-left: 15px;
   padding-top: 30px;
   font-size: 2rem;
-  color: #828282;
+  color: #5a606a;
   width: 100%;
   max-height: 100vh;
   overflow-y: scroll; }
@@ -240,17 +281,17 @@ input[name='submit'] {
 .menuButton {
   position: relative;
   margin: 0;
-  color: #828282;
+  color: #5a606a;
   margin-bottom: 50px; }
   .menuButton:last-child {
     margin-bottom: 0; }
   .menuButton:hover {
     transition: 0.3s;
-    color: #ff005c; }
+    color: #ff6600; }
   .menuButton a {
-    color: #828282; }
+    color: #5a606a; }
     .menuButton a:hover {
-      color: #ff005c; }
+      color: #ff6600; }
 
 #navigation-large {
   display: none; }
@@ -297,7 +338,7 @@ input[name='submit'] {
     position: relative;
     padding-left: 20px;
     border-radius: 5px;
-    background: #020202; }
+    background: #00050d; }
     .subMenu::before {
       position: absolute;
       top: 8px;
@@ -307,7 +348,7 @@ input[name='submit'] {
       width: 0;
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent;
-      border-right: 12px solid #020202; }
+      border-right: 12px solid #00050d; }
     .subMenu ul {
       height: 100%;
       list-style-type: none;
@@ -324,5 +365,5 @@ input[name='submit'] {
       padding: 5px 20px 5px 0px;
       height: 100%; }
   #like a {
-    color: #ff005c;
+    color: #ff6600;
     cursor: default; } }
