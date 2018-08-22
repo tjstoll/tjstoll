@@ -4,7 +4,7 @@
     <meta charset='utf-8'/>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     <title>taneisha</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://tjstoll.github.io/media/logo-crop.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="https://github.com/tjstoll/tjstoll.github.io/blob/master/images/logo.svg"/>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Old FA -->
     <script src="https://use.fontawesome.com/3c607a4c65.js"></script>
@@ -13,98 +13,61 @@
   </head>
 
   <body>
-    <div class="section1 bg-main" style='height: 2vh;'></div>
-
-    <!-- Navigation -->
-    <div class="navigation-small section1">
-      <div class="nav-controls flex1 r">
-        <i class="fas fa-bars controls" onclick="toggleSmallNav()"></i>
-      </div>
-
-      <div class="small-menu flex1 r">
-        <div class="menuButton">
-          <a href="https://tjstoll.github.io"><i class="fas fa-home"></i></a>
-        </div>
-        <div class="menuButton">
-          <a href='https://github.com/tjstoll'><i class="fab fa-github"></i></a>
-        </div>
-        <div class="menuButton">
-          <a href='https://codepen.io/tjstoll/'><i class="fab fa-codepen"></i></a>
-        </div>
-        <div class="menuButton">
-          <a href='https://www.instagram.com/_tjstoll/?hl=en'><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="menuButton">
-          <a href='mailto:taneishastoll@gmail.com'><i class="far fa-envelope"></i></a>
-        </div>
+    <!-- Header and Footer -->
+    <div class="container header">
+      <div class="border-bottom">
+        <ul class='header-links'>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-codepen"></i></a></li>
+          <li><a href="#"><i class="far fa-envelope"></i></a></li>
+          <li><a href='#'><i class="fab fa-github"></i></a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Landing -->
-    <div class="section2 container lg-height skew1 lb landing">
-      <div class="text-center">
-        <h1 class='text-main'>Taneisha Stoll</h1>
-        <h3 class='text-tertiary'>Freelance Developer</h3>
-        <button class='button-accent' type="button" name="button">Say Hi</button>
+    <div class="container footer">
+      <div class="border-top text-center">
+        <p id='name'>TJSTOLL</p>
       </div>
     </div>
+    <!-- And Header and Footer -->
 
-    <!-- About -->
-    <div class="container bg-secondary">
-      <h1>About Me</h1>
-      <p>I am Toronto born and mostly raised. I am an astronomy and physics graduate with a passion for web and software development. My goal in this life is to combine what I know and what I love to develop useful solution for people like you.</p>
-    </div>
+    <div class="wrapper">
+      <section class='bg-tertiary landing'>
+      </section>
 
-    <!-- Projects -->
-    <div class="container section1 bg-fourthiary">
-      <div class="section2 space-between">
+      <section class='row lc bg-tertiary'>
+        <div class="width50 cc">
+          <h1 class='text-center'>About</h1>
+          <p class='text-justify'>Hey, I'm Taneisha. Currently completing a degree in astronomy and physics at the University of Toronto. In my spare time I practice the ins and outs of web development on my own. My goal in this life is to have a career in software development. My dream would be to combine my knowledge of physics with my love of computers to develop useful solutions for all people across the world!</p>
+        </div>
+      </section>
+
+      <section class='col lc bg-fourthiary'>
+        <div class="cc">
+          <h1><a href="#"><i class="fab fa-codepen"></i></a> See my code in action</h1>
+        </div>
+      </section>
+
+      <section class='col lc bg-main'>
+        <div class="cc">
+          <h1><a href="#"><i class="fab fa-github"></i></a> See my contributions</h1>
+        </div>
+      </section>
+
+      <!-- <section>
         <div class="text-center">
-          <h3>See my code<br>in action</h3>
-          <img src="../images/codepen-brands.svg" alt="" class='skill-icon1'>
+          <img src="./images/logo.svg" alt="logo" height='100px'>
         </div>
         <div class="text-center">
-          <h3>See all of my<br>contributions</h3>
-          <img src="../images/github-brands.svg" alt="" class='skill-icon1'>
+          <p>hello@tjstoll.com</p>
+          <p>416 459 5222</p>
+          <p>Toronto, ON, Canada</p>
         </div>
-      </div>
-      <div class="section1 text-center">
-        <h3>Look at my (growing) stack</h3>
-        <div class="section1">
-          <div class="section2 space-between">
-            <img src="../images/html5-brands.svg" alt="" class='skill-icon'>
-            <img src="../images/css3-alt-brands.svg" alt="" class='skill-icon'>
-            <img src="../images/js-square-brands.svg" alt="" class='skill-icon'>
-          </div>
-          <div class="section2 space-between">
-            <img src="../images/terminal-solid.svg" alt="" class='skill-icon'>
-            <img src="../images/python-brands.svg" alt="" class='skill-icon'>
-            <img src="../images/java-brands.svg" alt="" class='skill-icon'>
-          </div>
-          <div class="section2 space-between">
-            <img src="../images/react-brands.svg" alt="" class='skill-icon'>
-            <img src="../images/git-brands.svg" alt="" class='skill-icon'>
-            <img src="../images/angular-brands.svg" alt="" class='skill-icon'>
-          </div>
+        <div class="bg-main">
+          <p>made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
         </div>
-      </div>
+      </section> -->
     </div>
-
-    <!-- Call To Action -->
-    <div class="container section2 sm-height lb">
-      <div class="text-center">
-        <h1>Project?</h1>
-        <h3>I can help. Just get in touch.</h3>
-        <button class='button-accent' type="button" name="button">Let's Work Together</button>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="container bg-tertiary text-center skew2">
-      <p>made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i> by taneisha stoll &#169; 2018</p>
-    </div>
-    <div class="section1 bg-main" style='height: 2vh;'></div>
-
-    <script type="text/javascript" src='./js/index.js'></script>
 
   </body>
 </html>

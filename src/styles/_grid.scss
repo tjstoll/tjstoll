@@ -1,10 +1,18 @@
 
 // Div Structures
 .container {
-  padding: 5rem 10%;
+  padding: 0 $frame-thickness;
 }
-
-.section1 {
+.wrapper {
+  margin: 4rem $frame-thickness;
+  // padding: 1rem;
+  border-width: 0 $frame-border 0 $frame-border;
+  border-style: solid;
+  // background: url('../images/woman.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.col {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -16,7 +24,7 @@
     }
   }
 }
-.section2 {
+.row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -33,15 +41,6 @@
 .block {
   padding: 1rem;
   box-sizing: border-box;
-}
-
-.skew1 {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-}
-.skew2 {
-  clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
-  position: relative;
-  top: -100;
 }
 
 // Div Spatial distributions
@@ -67,14 +66,13 @@
 .space-between {
   justify-content: space-between;
 }
-
+.stretch {
+  align-items: stretch;
+}
 // Text Alignments
 .text-center {text-align: center;}
 .text-justify {text-align: justify;}
 
 // Large Screens ---------------------------------------------------------------
 @media screen and (min-width: 950px) {
-  .container {
-    padding: 5rem 20%;
-  }
 }

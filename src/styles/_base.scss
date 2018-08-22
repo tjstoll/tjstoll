@@ -2,12 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+$frame-thickness: 4rem;
+$frame-border: 2px;
+$frame-colour: white;
+
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   // background: url('https://tjstoll.github.io/media/003-granulated-loom.png');
-  background: url('../images/concrete-wall.png');
+  // background: url('../images/concrete-wall.png');
   background-position: fixed;
   position: relative;
+  // background: #f5f0f0;
+  background: $frame-colour;
 }
 html {
   font-size: 11px;
@@ -44,6 +53,13 @@ a {
   }
 }
 
+section {
+  // padding: 1rem;
+  border-bottom: $frame-border solid black;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
 button {
   padding: 1rem;
   border: none;
@@ -55,6 +71,6 @@ button {
 // Large Screens ---------------------------------------------------------------
 @media screen and (min-width: 950px) {
   html {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
