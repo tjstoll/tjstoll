@@ -56,8 +56,10 @@ a {
 section {
   // padding: 1rem;
   border-bottom: $frame-border solid black;
-  min-height: 90vh;
+  min-height: 85vh;
   overflow: hidden;
+  position: relative;
+  &:last-of-type {border-bottom: none;}
 }
 
 button {

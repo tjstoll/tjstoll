@@ -4,13 +4,9 @@
   padding: 0 $frame-thickness;
 }
 .wrapper {
-  margin: 4rem $frame-thickness;
-  // padding: 1rem;
-  border-width: 0 $frame-border 0 $frame-border;
-  border-style: solid;
-  // background: url('../images/woman.jpg');
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  // border: 1px solid red;
 }
 .col {
   display: flex;
@@ -57,12 +53,10 @@
 // Div Alignments
 // c: centre, t: top, b: bottom, l: left, r: right
 .cc {margin: auto;}
-.ct {justify-content: center;}
+.c {justify-content: center;}
 .lc {align-self: center;}
-.lb {
-  justify-content: flex-end;
-  align-items: center;
-}
+.b {justify-content: flex-end;}
+
 .space-between {
   justify-content: space-between;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 .button-main, .bg-accent button, .bg-secondary button {
@@ -100,8 +101,11 @@ a {
 
 section {
   border-bottom: 2px solid black;
-  min-height: 90vh;
-  overflow: hidden; }
+  min-height: 85vh;
+  overflow: hidden;
+  position: relative; }
+  section:last-of-type {
+    border-bottom: none; }
 
 button {
   padding: 1rem;
@@ -118,11 +122,8 @@ button {
   padding: 0 4rem; }
 
 .wrapper {
-  margin: 4rem 4rem;
-  border-width: 0 2px 0 2px;
-  border-style: solid;
-  background-size: cover;
-  background-position: center; }
+  min-height: 100vh;
+  position: relative; }
 
 .col {
   display: flex;
@@ -173,15 +174,14 @@ button {
 .cc {
   margin: auto; }
 
-.ct {
+.c {
   justify-content: center; }
 
 .lc {
   align-self: center; }
 
-.lb {
-  justify-content: flex-end;
-  align-items: center; }
+.b {
+  justify-content: flex-end; }
 
 .space-between {
   justify-content: space-between; }
@@ -202,20 +202,17 @@ button {
   border-top: 2px solid black; }
 
 .header {
-  padding-top: 2rem;
   position: fixed;
   top: 0;
-  background: white;
-  min-width: 100%;
-  z-index: 1000; }
+  height: 7.5vh;
+  padding-bottom: 0.5rem; }
 
 .footer {
-  padding-bottom: 2rem;
   position: fixed;
+  width: 90vw;
+  height: 7.5vh;
   bottom: 0;
-  background: white;
-  min-width: 100%;
-  z-index: 1000; }
+  padding-top: 0.5rem; }
 
 .header-links {
   margin: 0;
@@ -232,15 +229,41 @@ button {
     .header-links a:hover {
       color: grey; }
 
+.content-box {
+  height: 85vh;
+  width: 90vw;
+  overflow-y: scroll;
+  border: 2px solid black; }
+  .content-box::-webkit-scrollbar {
+    width: 0px; }
+
 #name {
   font-family: 'Varela Round', sans-serif;
   font-weight: bold;
   letter-spacing: 0.5rem; }
 
 .landing {
-  background: url("../images/IMG_1649 (2).jpg");
+  background: url("../images/woman2.jpg");
   background-position: top;
   background-size: cover; }
+
+.about {
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); }
+
+.contact-info {
+  padding: 5rem; }
+  .contact-info p {
+    display: inline-block; }
+    .contact-info p:after {
+      content: '∙';
+      padding: 0 1rem; }
+    .contact-info p:last-child:after {
+      content: '';
+      padding: 0; }
+
+.content-footer {
+  padding: 3rem 0;
+  color: #5a606a; }
 
 @media only screen and (min-width: 1080px) {
   .landing {

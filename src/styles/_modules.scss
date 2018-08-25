@@ -5,20 +5,29 @@
   border-top: $frame-border solid black;
 }
 .header {
-  padding-top: 2rem;
+  // padding-top: 2rem;
+  // position: fixed;
+  // top: 0;
+  // background: $frame-colour;
+  // min-width: 100%;
+  // z-index: 1000;
   position: fixed;
   top: 0;
-  background: $frame-colour;
-  min-width: 100%;
-  z-index: 1000;
+  height: 7.5vh;
+  padding-bottom: 0.5rem;
 }
 .footer {
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
+  // position: fixed;
+  // bottom: 0;
+  // background: $frame-colour;
+  // min-width: 100%;
+  // z-index: 1000;
   position: fixed;
+  width: 90vw;
+  height: 7.5vh;
   bottom: 0;
-  background: $frame-colour;
-  min-width: 100%;
-  z-index: 1000;
+  padding-top: 0.5rem;
 }
 
 .header-links {
@@ -39,6 +48,16 @@
   }
 }
 
+.content-box {
+  height: 85vh;
+  width: 90vw;
+  overflow-y: scroll;
+  border: $frame-border solid black;
+  // border-radius: 5px;
+  &::-webkit-scrollbar {width: 0px;}
+  // &::-webkit-scrollbar-track {background: black;}
+  // &::-webkit-scrollbar-thumb {background: grey;}
+}
 #name {
   font-family: 'Varela Round', sans-serif;
   font-weight: bold;
@@ -46,10 +65,32 @@
 }
 
 .landing {
-  background: url('../images/IMG_1649 (2).jpg');
+  background: url('../images/woman2.jpg');
   background-position: top;
   background-size: cover;
   // background-attachment: fixed;
+}
+.about {
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.contact-info {
+  padding: 5rem;
+  p {
+    display: inline-block;
+    &:after {
+      content: '∙';
+      padding: 0 1rem;
+    }
+    &:last-child {
+      &:after {content: ''; padding: 0;}
+    }
+  }
+}
+
+.content-footer {
+  padding: 3rem 0;
+  color: $tertiary;
 }
 
 @media only screen and (min-width: 1080px) {
