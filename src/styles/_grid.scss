@@ -4,7 +4,7 @@
   padding: 5rem 10%;
 }
 
-.section1 {
+.col, .row-break {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -17,7 +17,7 @@
   }
 }
 
-.section2 {
+.row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -63,5 +63,22 @@
 @media screen and (min-width: 950px) {
   .container {
     padding: 5rem 15%;
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  .row-break {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    position: relative;
+    & > .block {
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
